@@ -1,4 +1,4 @@
-# sundry-notifications
+# sundry-weather-notifications
 
 **Project Title :** Sundry Weather Notifications 
 
