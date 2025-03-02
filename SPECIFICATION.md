@@ -26,4 +26,7 @@ The development of a complete artefact requires technical skills and a requireme
    - Testing
   
 6. System challenges and constraints ; Pricing for Firebase , these rate limits will affect how many real time push notifications are being sent out to users. API calls that also need to be cached using redis can lead to poor optimisation and impact client experience.
+
+7. The **4 containers** namely cache , notification service , user analytics and logging service their interactions are implicit or abstracted. They are not crucial for core performance and behaviour , mostly used to manage and track system health.
+This is is important in the balancing of the detail and readability of the diagram. Included interactions are meaningful.
    
