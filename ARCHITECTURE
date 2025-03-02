@@ -1,0 +1,30 @@
+```mermaid
+C4Container
+    title Weather Notification Application - Container View
+
+    Person(user, "User", "Interacts with the weather app")
+
+    System_Boundary(weatherApp, "Weather Notification App") {
+        Container(webApp, "Web/Mobile App (React/Flutter)", "Displays weather updates and user preferences")
+        Container(backend, "Backend API (Flask/Node.js)", "Handles business logic and data processing")
+        Container_DB(database, "Database (PostgreSQL/Firebase)", "Stores user preferences and notification history")
+        Container(cache, "Cache (Redis/Memcached)", "Caches weather data for faster response times")
+        Container(notificationService, "Notification Service", "Manages push, email, and SMS alerts")
+        Container(userAnalytics, "User Analytics", "Tracks user activity for insights")
+        Container(loggingService, "Logging & Monitoring", "Handles logs, errors, and system performance")
+    }
+
+    System_Ext(weatherAPI, "Weather API (OpenWeatherMap)", "Provides real-time weather data")
+    System_Ext(authService, "Authentication Service (Firebase Auth/OAuth)", "Handles user authentication")
+
+    user -> webApp : Uses
+    webApp -> backend : Sends requests
+    backend -> weatherAPI : Fetches live weather data
+    backend -> cache : Checks cache before fetching data
+    backend -> database : Stores user preferences and history
+    backend -> notificationService : Triggers weather alerts
+    backend -> userAnalytics : Tracks app usage metrics
+    backend -> loggingService : Sends logs and system health data
+    webApp -> authService : Handles login/logout
+    backend -> authService : Validates user identity
+```
