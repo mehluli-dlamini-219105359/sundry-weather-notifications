@@ -25,5 +25,7 @@ C4Component
     Rel(authService, backend, "Validation Result")
     Rel(backend, database, "Retrieves User Data")
     Rel(database, backend, "User Data")
-    Rel(backend, webApp, "User Data")
+    Rel(backend, weatherAPI, "Fetches Weather Data")
+    Rel(weatherAPI, backend, "Weather Data")
+    Rel(backend, webApp, "User Data & Weather Updates")
     Rel(webApp, user, "Displays App Data")
