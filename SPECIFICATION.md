@@ -3,7 +3,7 @@
 **Project Title :** Sundry Weather Notifications 
 
 **Domain:** Meteorology. 
-Integration with WeatherAPIs , application will provide real time updates and use environmental data service to users.
+- Integration with WeatherAPIs , application will provide real time updates and use environmental data service to users.
 
 **Problem Statement:** The purpose of the Sundry Weather Notifications application is to inform commuters about weather events around their area , the route they use to commute and inform them and better plan around any potential weather concerns forecasted for their specific location. Changes in weather such as high finds and fires which either cause more force being exterted on you the body of a vehicle or a decrease in visibility on roads, have a great impact on the time and speed in which a motor vehicle can travel. To simply nudge a user through notifications before and or during a trip to be cautious of their speeds and engage within the application through a scoreboard system can create a community of more alert drivers , no matter the size. 
 
