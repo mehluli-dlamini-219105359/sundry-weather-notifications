@@ -1,3 +1,4 @@
+```mermaid
 C4Context
     title Weather Notification Application - System Context
 
@@ -16,3 +17,4 @@ C4Context
     weatherApp -> notificationService : Sends alerts
     user -> authService : Logs in / Registers
     weatherApp -> authService : Validates user identity
+```
