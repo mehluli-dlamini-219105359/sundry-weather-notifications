@@ -7,5 +7,5 @@ less visibilty for both drivers and padestrians on the very same roads. These we
 The arrive alive campaign in South Africa has helped create public awareness of the dangers of drinking and driving , this awareness project through a simple Notification can possible create more 
 alert drivers and contribute to safer and much intentional driving practices. Small nudges through a cellular device can impossible alter behaviour or attitude as we use these devices daily.
 
-SPECIFICATION.md link
-ARCHITECTURE.md link
+Links to [SPECIFICATION.md](SPECIFICATION.md)
+& **ARCHITECTURE.md** 
