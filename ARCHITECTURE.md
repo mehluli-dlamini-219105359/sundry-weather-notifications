@@ -1,4 +1,3 @@
-%% C4 Component Diagram
 C4Component
     title Sundry Notification Beta - Component View
 
