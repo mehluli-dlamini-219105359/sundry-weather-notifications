@@ -1,3 +1,4 @@
+```mermaid
 C4Component
     title Sundry Notification Beta - Component View
 
@@ -29,3 +30,4 @@ C4Component
     Rel(weatherAPI, backend, "Weather Data")
     Rel(backend, webApp, "User Data & Weather Updates")
     Rel(webApp, user, "Displays App Data")
+```
