@@ -1,30 +1,18 @@
-```mermaid
-C4Container
-    title Weather Notification Application - Container View
+C4Context
+    title Weather Notification Application - System Context
 
-    Person(user, "User", "Interacts with the weather app")
+    Person(user, "User", "Receives weather updates and notifications")
 
-    System_Boundary(weatherApp, "Weather Notification App") {
-        Container(webApp, "Web/Mobile App (React/Flutter)", "Displays weather updates and user preferences")
-        Container(backend, "Backend API (Flask/Node.js)", "Handles business logic and data processing")
-        Container_DB(database, "Database (PostgreSQL/Firebase)", "Stores user preferences and notification history")
-        Container(cache, "Cache (Redis/Memcached)", "Caches weather data for faster response times")
-        Container(notificationService, "Notification Service", "Manages push, email, and SMS alerts")
-        Container(userAnalytics, "User Analytics", "Tracks user activity for insights")
-        Container(loggingService, "Logging & Monitoring", "Handles logs, errors, and system performance")
-    }
+    System(weatherApp, "Weather Notification App", "Fetches weather data and sends notifications")
 
     System_Ext(weatherAPI, "Weather API (OpenWeatherMap)", "Provides real-time weather data")
+
+    System_Ext(notificationService, "Notification Service (Push/SMS/Email)", "Delivers weather alerts to users")
+
     System_Ext(authService, "Authentication Service (Firebase Auth/OAuth)", "Handles user authentication")
 
-    user -> webApp : Uses
-    webApp -> backend : Sends requests
-    backend -> weatherAPI : Fetches live weather data
-    backend -> cache : Checks cache before fetching data
-    backend -> database : Stores user preferences and history
-    backend -> notificationService : Triggers weather alerts
-    backend -> userAnalytics : Tracks app usage metrics
-    backend -> loggingService : Sends logs and system health data
-    webApp -> authService : Handles login/logout
-    backend -> authService : Validates user identity
-```
+    user -> weatherApp : Uses
+    weatherApp -> weatherAPI : Fetches weather data
+    weatherApp -> notificationService : Sends alerts
+    user -> authService : Logs in / Registers
+    weatherApp -> authService : Validates user identity
