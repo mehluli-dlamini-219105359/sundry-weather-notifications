@@ -1,6 +1,5 @@
-**SYSTEM REQUIREMENTS**
+**FUNCTIONAL REQUIREMENTS**
 
-| **Title** | **Sundry Notifications - Functional Requirements** |  |
 |-----------|----------------------------------------------------|---|
 | **#** | **Requirement** | **Acceptance Criteria** |
 | **1.** | **User Authentication & Access Management** | - Users should receive an authentication token upon successful login.<br>- Failed login attempts should trigger a rate limit after 5 unsuccessful tries to prevent brute-force attacks. |
