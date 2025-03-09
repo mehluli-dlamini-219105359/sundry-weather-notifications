@@ -3,7 +3,6 @@
 | **Title** | **Sundry Notifications (Functional Requirements)** |  |
 |-----------|----------------------------------------------------|---|
 | **#** | **Requirement** | **Acceptance Criteria** |
-|-------|-----------------|-------------------------|
 | **1.** | **User Authentication & Access Management** | - Users should receive an authentication token upon successful login.<br>- Failed login attempts should trigger a rate limit after 5 unsuccessful tries to prevent brute-force attacks. |
 | **2.** | **Weather Data Retrieval & Caching** | - Cached data should be invalidated and refreshed after 15 minutes.<br>- The system should return cached data if the external API is unavailable. |
 | **3.** | **Personalized Notification Preferences** | - Users should be able to opt in/out of specific notifications.<br>- Changes to preferences should update in PostgreSQL within 5 seconds to reflect in subsequent notifications. |
