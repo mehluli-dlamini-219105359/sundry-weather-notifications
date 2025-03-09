@@ -1,6 +1,6 @@
-**FUNCTIONAL REQUIREMENTS**
+**System Requirements** 
 
-| **#** | **Requirement** | **Acceptance Criteria** |
+| **#** | **Functional Requirement** | **Acceptance Criteria** |
 |-------|-----------------|-------------------------|
 | **1.** | **User Authentication & Access Management** | - Users should receive an authentication token upon successful login.<br>- Failed login attempts should trigger a rate limit after 5 unsuccessful tries to prevent brute-force attacks. |
 | **2.** | **Weather Data Retrieval & Caching** | - Cached data should be invalidated and refreshed after 15 minutes.<br>- The system should return cached data if the external API is unavailable. |
