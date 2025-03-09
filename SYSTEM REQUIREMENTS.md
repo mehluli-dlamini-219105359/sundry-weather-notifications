@@ -1,5 +1,5 @@
 **System Requirements** 
-
+**Section A**
 | **#** | **Functional Requirement** | **Acceptance Criteria** |
 |-------|-----------------|-------------------------|
 | **1.** | **User Authentication & Access Management** | - Users should receive an authentication token upon successful login.<br>- Failed login attempts should trigger a rate limit after 5 unsuccessful tries to prevent brute-force attacks. |
@@ -15,6 +15,7 @@
 | **11.** | **User Activity Dashboard** | - The dashboard should refresh data every 10 seconds using Grafana for visualization.<br>- Product Managers should be able to filter data by time range and user segment. |
 | **12.** | **Disaster Recovery & Failover** | - Failover should occur within 30 seconds using AWS RDS Multi-AZ failover.<br>- Data loss during failover should be minimized to the last committed transaction, using PostgreSQL’s write-ahead logging (WAL). |
 
+**Section B**
 
 | **Category**     | **Non-Functional Requirement**                                                                                                   |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------|
