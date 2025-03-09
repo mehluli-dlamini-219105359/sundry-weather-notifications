@@ -14,3 +14,20 @@
 | **10.** | **Logging & Monitoring** | - Logs should be collected in Datadog and be searchable within 5 seconds of an event occurrence.<br>- An alert should trigger if API error rates exceed normal operational thresholds. |
 | **11.** | **User Activity Dashboard** | - The dashboard should refresh data every 10 seconds using Grafana for visualization.<br>- Product Managers should be able to filter data by time range and user segment. |
 | **12.** | **Disaster Recovery & Failover** | - Failover should occur within 30 seconds using AWS RDS Multi-AZ failover.<br>- Data loss during failover should be minimized to the last committed transaction, using PostgreSQL’s write-ahead logging (WAL). |
+
+
+| **Category**     | **Non-Functional Requirement**                                                                                                   |
+|------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| Usability        | "The user interface shall comply with WCAG 2.1 accessibility standards."                                                         |
+|                  | "The mobile app interface shall be designed with a responsive layout across iOS and Android devices."                             |
+| Deployability    | "The system shall be deployable on Windows, Linux, and macOS servers."                                                            |
+|                  | "The application shall use a CI/CD pipeline for continuous integration and automated deployment."                                 |
+| Maintainability  | "The system’s codebase shall be modular and maintainable."                                                                         |
+|                  | "The system shall have detailed and up-to-date documentation, including API guides and deployment steps."                         |
+| Scalability      | "The system shall support up to 1,000 concurrent users during peak hours."                                                        |
+| Security         | "All user data shall be encrypted using AES-256 encryption."                                                                      |
+|                  | "Access control shall be enforced using Role-Based Access Control (RBAC)."                                                        |
+| Performance      | "Search results shall load within 2 seconds under normal conditions."                                                             |
+|                  | "Push notifications shall be delivered within 10 seconds."                                                                        |
+| Availability     | "The system shall have 99.9% uptime."                                                                                             |
+| Compliance       | "The system shall comply with data protection regulations such as GDPR."                                                          |
