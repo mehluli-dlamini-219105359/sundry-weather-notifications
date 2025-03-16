@@ -1,1 +1,10 @@
 ![UML4](https://github.com/user-attachments/assets/11bfffc8-d743-427d-98fa-7c2364647e3d)
+
+1. The **Client** actor can initiate the Sign in to App use case, which supports their concern for seamless access to the app. This ensures the system remains accessible across devices, addressing issues like notification fatigue and slow app performance.
+2. The **Support** Agent actor can initiate the Send Notifications use case, ensuring that notifications align with user preferences. This helps resolve concerns related to the timely delivery of notifications and user engagement.
+3. The **Developer** actor can initiate the Fetch Weather Data use case, which directly impacts the system’s performance and the timely delivery of weather updates. This supports the need for code efficiency and error handling, ensuring fast feature deployment and low production errors.
+4. The **DevOps Engineer** actor can manage the Monitor System Logs use case, ensuring system reliability and addressing issues like cloud cost optimization and real-time monitoring to maintain uptime and performance.
+5. The **Architect** actor can influence the Fetch Weather Data use case, ensuring a scalable and resilient system architecture. This helps address concerns about system performance and API efficiency.
+6. The **Database Administrator** actor can initiate the Retrieve User Preferences use case, addressing concerns about data integrity and optimizing query performance, ensuring fast response times and accurate user data retrieval.
+7. The **Data Engineer** actor can influence the Track User Activity use case, ensuring real-time processing and data consistency across systems. This supports the need for efficient data pipelines and minimizes discrepancies in user activity logs.
+8. The **System Admin** actor can initiate the Monitor System Logs use case, ensuring that system performance is continuously tracked and any issues are addressed promptly, helping to resolve concerns related to system health and scalability.
