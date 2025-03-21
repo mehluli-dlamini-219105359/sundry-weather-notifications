@@ -6,9 +6,12 @@ Created a Kanban Board called **Assignment 6 Kanban Board** to manage a two-week
 **Sprint MVP / Goal:** Deliver the core authentication and account creation/registration functionalities to enable a seamless login onboarding experience.
 
 **Task 1 : User Story Creation**
+
 Using the **INVEST criteria** user stories were created and saved to a seperate view. 
 [User Story View](https://github.com/users/mehluli-dlamini-219105359/projects/1/views/6)
 <img width="1470" alt="Screenshot 2025-03-20 at 19 47 22" src="https://github.com/user-attachments/assets/906a1a17-6705-4b85-9111-7a5e5882430f" />
+
+User stories where derived from the previous functional requirements [System Requirements Document](https://github.com/mehluli-dlamini-219105359/sundry-weather-notifications/blob/main/SYSTEM%20REQUIREMENTS.md)
 
 **Task 2 : Product Backlog**
 Using MoSCoW prioritization and effort estimates (fibonacci sequence) to view all items , you can click on this link
