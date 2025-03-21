@@ -14,7 +14,8 @@ Using the **INVEST criteria** user stories were created and saved to a seperate 
 User stories where derived from the previous functional requirements [System Requirements Document](https://github.com/mehluli-dlamini-219105359/sundry-weather-notifications/blob/main/SYSTEM%20REQUIREMENTS.md)
 
 **Task 2 : Product Backlog**
-Using MoSCoW prioritization and effort estimates (fibonacci sequence) to view all items , you can click on this link
+Using MoSCoW prioritization and effort estimates (fibonacci sequence) to view all items
+**Justification** : The backlog is justified based on the MVP goal of delivering **core authentication and account creation/registration functionalities as Must Have**, which are essential for a seamless onboarding experience and user access. Additionally, the backlog will prioritise features such as weather data retrieval and push notifications to enhance user engagement in future sprints under **Should-haves** and align with the product’s primary goal of providing relevant, real-time information to users.
 [Product Backlog](https://github.com/users/mehluli-dlamini-219105359/projects/1/views/7)
 <img width="1470" alt="Screenshot 2025-03-20 at 20 13 08" src="https://github.com/user-attachments/assets/84a9254f-9af0-478c-ba9c-c175fbba8d19" />
 
