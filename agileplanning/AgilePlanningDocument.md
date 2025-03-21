@@ -21,3 +21,17 @@ Defined sprint goal and plan for two weeks , created subtasks based on User Stor
 Each task consists of different componest such as design , developing and implementation. The current plan once this sprint has been completed is to start testing , this is intended as the staggered approach by having development a week or two ahead creates a sizeable backlog for QA team where as in the same sprint it would delay new items being taken up. 
 <img width="1470" alt="Screenshot 2025-03-21 at 11 03 44" src="https://github.com/user-attachments/assets/e358b496-f011-41ba-ab02-11b5c642b7e9" />
 
+# 🛠️ Sprint Contribution to MVP Development
+
+   - This sprint delivers a **small, functional piece** of the product, which will result in a functional version of the Project / Minimum Viable Product  after several sprints.
+
+### **Sprint 1:** User Authentication
+   - **Goal:** Develop core authentication system.
+   - **Tasks:** 
+     - Implement login functionality.
+     - Implement signup and password reset functionality.
+     - Integrate with backend authentication system.
+   - **Outcome:** Users can securely sign up, log in, and reset passwords.
+
+   - By consistently breaking down MVP features into manageable tasks during sprints, the team ensures that they are always working on features that will deliver the most value to customers and stakeholders.
+   - By delivering functional increments at the end of each sprint, the team can identify and address issues This is especially valuable when building an MVP, as the goal is to test hypotheses about the product's value with minimal resources.
