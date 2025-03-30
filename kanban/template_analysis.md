@@ -1,5 +1,25 @@
 ## ☀️ Project Template Analysis
 
+
+
 | Roadmap Template         | Feature Release                                            | Iterative Development                  |
 |--------------------------|------------------------------------------------------------|-----------------------------------------|
 | ![Roadmap](https://github.com/user-attachments/assets/d33763bf-243d-45c3-8c0e-daa1efec2590) | ![Feature Release](https://github.com/user-attachments/assets/b2e25af1-3cf2-4a61-b26b-bccf616a547e) | ![Iterative Development](https://github.com/user-attachments/assets/26711852-f2b1-4895-846f-adba1298dce2) |
+
+
+After exploring the templates , I have decided to select the **Kanban Board** to better align with my project needs.
+As this board will be used in Agile development and for sprint iterations. It will help  me track progress be accountable and prioritize work to be down as the project grows and features increase. 
+
+**Justification** Visualizing Work is one of the main advantages of using the Kanban board. It will enable me to see all tasks in one place, broken down into manageable steps while filtering and customizing the board. The columns on the board are **Sprint Backlog, To Do, In Progress, In Review/Testing, and Done** — whihc create a straightforward flow that tracks where each task is in its lifecycle. This is essential for clarity; As I can immediately identify which tasks are planned for the sprint, what needs to be done, and which tasks are already completed. The visual representation also gives me a snapshot of what’s ahead, which helps me prioritize and focus on completing tasks one at a time given that I am the sole contributor / stakeholder.
+
+An important feature of the Kanban board is its ability to limit Work-in-Progress (WIP) - Currently I have maxed it to 3 items. By setting limits on the number of tasks in columns like **In Progress and In Review/Testing**, I ensure that I don’t take on too many tasks at once, which could lead to distractions or unfinished work. Secondly , Limiting WIP helps me maintain focus and complete tasks before moving on to new ones. Which is crucial in maintaining a consistent workflow and preventing bottlenecks. [Github Docx](https://docs.github.com/en/issues/planning-and-tracking-with-projects)
+
+The board also allows me to remain flexible in my approach, which is another key Agile principle. As priorities shift or new requirements come up, I can quickly re-prioritize tasks. The flexibility of the Kanban board enables me to adjust the board easily and add or remove tasks as needed without disrupting the entire workflow. This adaptability is particularly important in Agile, where things rarely stay static and change is constant. Being able to reflect this flexibility on my Kanban board gives me the freedom to adjust quickly, ensuring that I’m always focused on the most valuable and important tasks.
+
+Additionally, continuous delivery is emphasized on the Kanban board. Agile development relies on delivering incremental improvements regularly, and the board helps break down the project into small, manageable tasks that can be completed and moved to the Done column quickly. This approach ensures that progress is consistently made and small achievements are tracked, which helps in maintaining momentum. By focusing on smaller chunks of work, I avoid getting bogged down with large, overwhelming tasks. The regular updates on the board allow me to measure progress in real-time, keeping me aligned with the goal of delivering valuable outcomes regularly.
+
+Lastly, even though I’m working alone, the Kanban board still promotes accountability. By having everything laid out clearly, I can easily see what I’ve done and what still needs to be done. This setup keeps me accountable for my own progress and tasks. The visual nature of the board helps me keep a sense of achievement as I move tasks through the columns and watch them progress toward completion.
+
+In conclusion, using a Kanban board in my Agile development process is essential for maintaining clarity, focus, and productivity. It allows me to visualize my tasks, limit work-in-progress, stay adaptable, deliver continuously, and maintain accountability—all crucial components of an effective Agile approach. Even as a solo developer, the board keeps me aligned with Agile principles, ensuring that I remain productive and efficient throughout the sprint.
+
+
