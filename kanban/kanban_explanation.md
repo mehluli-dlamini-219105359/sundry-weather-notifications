@@ -7,12 +7,12 @@ This board will focus on items that are specific to the login feature **(Sundry 
 ## How My Board Supports Agile Workflows
 
 ### 1. Visualizing Task Workflow
-My **Kanban board**, named **"Assignment 6 Kanban Board"**, is structured into **columns representing task progress**. [Board](https://github.com/users/mehluli-dlamini-219105359/projects/4/views/1)
+My **Kanban board**, named **"Assignment 6 Kanban Board"**, is structured into **columns representing task progress**. [Custom Kanban Board View](https://github.com/users/mehluli-dlamini-219105359/projects/1/views/9)
 
 Each column corresponds to a different stage in the workflow, such as:
-- **To Do** – Backlogged tasks that need to be worked on.
-- **In Progress** – Tasks currently being worked on.
-- **Review/Testing** – Completed tasks awaiting validation.
+- **To Do** – Backlogged tasks that need to be worked on. - **Maximum of 3 Items**
+- **In Progress** – Tasks currently being worked on. - **Maximum of 3 Items**
+- **Review/Testing** – Completed tasks awaiting validation.- **Maximum of 3 Items** 
 - **Done** – Successfully completed tasks.
 
 This visualization provides a clear **real-time snapshot** of the work status, ensuring transparency in the sprint.
