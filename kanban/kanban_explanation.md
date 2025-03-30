@@ -11,6 +11,7 @@ This board will focus on items that are specific to the login feature **(Sundry 
 
 ### 1. Visualizing Task Workflow
 My **Kanban board**, named **"Assignment 6 Kanban Board"**, is structured into **columns representing task progress**. [Custom Kanban Board View](https://github.com/users/mehluli-dlamini-219105359/projects/1/views/9)
+
 All items (tasks) are assigned to me , as the sole contributor / stakeholder of this assignment. 
 
 Each column corresponds to a different stage in the workflow, such as:
@@ -19,7 +20,12 @@ Each column corresponds to a different stage in the workflow, such as:
 - **Review/Testing** – Completed tasks awaiting validation.- **Maximum of 3 Items** 
 - **Done** – Successfully completed tasks. - **No Limit** 
 
+## ☀️ Screen Shots 
+![image](https://github.com/user-attachments/assets/ad234ecf-b84e-4073-98ce-7eaa440a747f)
 This visualization provides a clear **real-time snapshot** of the work status, ensuring transparency in the sprint.
+### Tasks and Labels
+![image](https://github.com/user-attachments/assets/6f0cc165-6a48-4fd9-b69b-43684c2fdfb6)
+![image](https://github.com/user-attachments/assets/7c9f4ac7-4d05-407b-a73a-7d13dad57992)
 
 ### 2. Limiting Work-in-Progress (WIP)
 To prevent overload and maintain efficiency, I implement **WIP limits** on columns such as **“In Progress”** and **“Review/Testing.”**
@@ -31,10 +37,8 @@ To prevent overload and maintain efficiency, I implement **WIP limits** on colum
 - **Adaptability:** The board allows for **dynamic reprioritization**, making it easy to adjust the backlog as priorities shift.
 - **Transparency & Collaboration:** Even as the sole stakeholder, the board provides **self-accountability**, ensuring a clear understanding of sprint progress and deadlines.
 
-## ☀️ Screen Shots 
-![image](https://github.com/user-attachments/assets/ad234ecf-b84e-4073-98ce-7eaa440a747f)
 
-### Tasks and Labels
-![image](https://github.com/user-attachments/assets/6f0cc165-6a48-4fd9-b69b-43684c2fdfb6)
+
+
 
 
