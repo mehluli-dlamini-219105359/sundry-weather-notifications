@@ -14,11 +14,14 @@ My **Kanban board**, named **"Assignment 6 Kanban Board"**, is structured into *
 
 All items (tasks) are assigned to me , as the sole contributor / stakeholder of this assignment and filtered by query to represent priority of board items. 
 
+**Customisation Choices** 
 Each column corresponds to a different stage in the workflow, such as:
 - **To Do** – Backlogged tasks that need to be worked on. - **Maximum of 3 Items**
 - **In Progress** – Tasks currently being worked on. - **Maximum of 3 Items**
 - **Review/Testing** – Completed tasks awaiting validation.- **Maximum of 3 Items** 
-- **Done** – Successfully completed tasks. - **No Limit** 
+- **Done** – Successfully completed tasks. - **No Limit**
+
+- This streamlined setup limits distractions, encourages focus on one task at a time, and improves team collaboration (or, in this case, individual accountability) by providing a clear, visual representation of the work that needs to be done. This promotes a higher level of efficiency and ensures steady progress throughout the sprint.
 
 ## ☀️ Screen Shots 
 ![image](https://github.com/user-attachments/assets/ad234ecf-b84e-4073-98ce-7eaa440a747f)
