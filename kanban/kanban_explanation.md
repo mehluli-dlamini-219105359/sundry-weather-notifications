@@ -12,8 +12,6 @@ This board will focus on items that are specific to the login feature **(Sundry 
 ### 1. Visualizing Task Workflow
 My **Kanban board**, named **"Assignment 6 Kanban Board"**, is structured into **columns representing task progress**. [Custom Kanban Board View](https://github.com/users/mehluli-dlamini-219105359/projects/1/views/9)
 
-All items (tasks) are assigned to me , as the sole contributor / stakeholder of this assignment and filtered by query to represent priority of board items. 
-
 **Customisation Choices** 
 Each column corresponds to a different stage in the workflow, such as:
 - **To Do** – Backlogged tasks that need to be worked on. - **Maximum of 3 Items**
@@ -27,6 +25,7 @@ Each column corresponds to a different stage in the workflow, such as:
 ![image](https://github.com/user-attachments/assets/ad234ecf-b84e-4073-98ce-7eaa440a747f)
 This visualization provides a clear **real-time snapshot** of the work status, ensuring transparency in the sprint.
 ### Tasks and Labels
+All items (tasks) are assigned to me , as the sole contributor / stakeholder of this assignment and filtered by query to represent priority of board items. 
 ![image](https://github.com/user-attachments/assets/6f0cc165-6a48-4fd9-b69b-43684c2fdfb6)
 ![image](https://github.com/user-attachments/assets/7c9f4ac7-4d05-407b-a73a-7d13dad57992)
 
