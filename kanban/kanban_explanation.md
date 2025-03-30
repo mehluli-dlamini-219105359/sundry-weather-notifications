@@ -4,6 +4,9 @@ A **Kanban board** is a workflow management tracking tool to assess the progress
 support continous delivery , implementation and iterations of features made by a team with different roles and responsibilities.
 This board will focus on items that are specific to the login feature **(Sundry Weather Notifications)** of the project to better align with focus and order of priority.
 
+**NB** : I have created a custom view for this board which better alings with adding custom columns **(To-do , In progress , Review|Testing & Done)**. The reason for a Sprint Backlog column is to also highlight which user stories will be used and broken down into tasks for the purpose of showing which items are in which status. Each column (excluding Sprint Backlog) can take up to 3 items to better support focus and priority , Design is the only item to be in Progress and taken up in this sprint/iteration.
+
+
 ## How My Board Supports Agile Workflows
 
 ### 1. Visualizing Task Workflow
