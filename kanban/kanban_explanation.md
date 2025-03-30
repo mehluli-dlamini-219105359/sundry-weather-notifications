@@ -13,7 +13,7 @@ Each column corresponds to a different stage in the workflow, such as:
 - **To Do** – Backlogged tasks that need to be worked on. - **Maximum of 3 Items**
 - **In Progress** – Tasks currently being worked on. - **Maximum of 3 Items**
 - **Review/Testing** – Completed tasks awaiting validation.- **Maximum of 3 Items** 
-- **Done** – Successfully completed tasks.
+- **Done** – Successfully completed tasks. - **No Limit** 
 
 This visualization provides a clear **real-time snapshot** of the work status, ensuring transparency in the sprint.
 
