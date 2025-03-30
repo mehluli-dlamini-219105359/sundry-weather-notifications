@@ -26,3 +26,7 @@ To prevent overload and maintain efficiency, I implement **WIP limits** on colum
 - **Continuous Delivery:** Tasks are broken into **small, functional increments** that contribute directly to the sprint goal. This ensures that value is delivered regularly.
 - **Adaptability:** The board allows for **dynamic reprioritization**, making it easy to adjust the backlog as priorities shift.
 - **Transparency & Collaboration:** Even as the sole stakeholder, the board provides **self-accountability**, ensuring a clear understanding of sprint progress and deadlines.
+
+## ☀️ Screen Shots 
+![image](https://github.com/user-attachments/assets/ad234ecf-b84e-4073-98ce-7eaa440a747f)
+
