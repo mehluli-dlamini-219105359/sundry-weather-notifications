@@ -20,6 +20,7 @@ Columns as stages to the workflow, such as:
 - **In Progress** – Tasks currently being worked on. - **Maximum of 3 Items**
 - **Review/Testing** – Completed tasks awaiting validation.- **Maximum of 3 Items** 
 - **Done** – Successfully completed tasks. - **No Limit**
+- **Won't Do** - Items that will not be done in sprint or feature is scrapped.
 
 - This streamlined setup limits distractions, encourages focus on one task at a time, and improves team collaboration (or, in this case, individual accountability) by providing a clear, visual representation of the work that needs to be done. This promotes a higher level of efficiency and ensures steady progress throughout the sprint.
 
