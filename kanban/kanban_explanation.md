@@ -27,6 +27,8 @@ Columns as stages to the workflow, such as:
 ## ☀️ Screen Shots 
 ![image](https://github.com/user-attachments/assets/ad234ecf-b84e-4073-98ce-7eaa440a747f)
 This visualization provides a clear **real-time snapshot** of the work status, ensuring transparency in the sprint.
+![image](https://github.com/user-attachments/assets/6a9327f5-2792-429f-b8f5-d4fe41596ede)
+
 ### Tasks and Labels
 All items (tasks) are assigned to me , as the sole contributor / stakeholder of this assignment and filtered by query to represent priority of board items. 
 ![image](https://github.com/user-attachments/assets/6f0cc165-6a48-4fd9-b69b-43684c2fdfb6)
