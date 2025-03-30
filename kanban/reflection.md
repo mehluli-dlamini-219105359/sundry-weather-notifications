@@ -14,3 +14,17 @@ I made sure the images were high-quality and the board layout was easy to read, 
 Development and Testing have not started it would be disingenuous of me to add items in those columns.
 
 9. **Staying Focused on Key Agile Principles**: Finally, I needed to ensure the Kanban board aligned with **Agile principles**—particularly **visualizing work**, **limiting work-in-progress**, and ensuring **continuous delivery**.
+
+# 🛠️ Comparison
+
+| Feature                                   | GitHub Templates                                         | Trello                                             | Jira                                              |
+|-------------------------------------------|----------------------------------------------------------|----------------------------------------------------|---------------------------------------------------|
+| **User Interface (UI)**                   | Simple Kanban-style board integrated with GitHub repos   | Highly visual, drag-and-drop boards with lists     | Complex interface with advanced Agile features    |
+| **Customization**                          | Basic customization with columns and tasks               | Extensive customization with labels, lists, and cards | Highly customizable with workflows, issue types, and permissions |
+| **Integration with Other Tools**          | Seamlessly integrates with GitHub repositories           | Integrates with tools like Slack, Google Drive, and others | Integrates with development tools like GitHub, Bitbucket, and more |
+| **Features for Agile Methodology**        | Basic Agile features like boards and issue tracking      | Kanban-style boards, with Agile features available via Power-Ups | Advanced Agile tools such as sprints, backlogs, and burndown charts |
+| **Ease of Use
+
+# 🕵🏽‍♂️ Sources
+[Tech Republic](https://www.techrepublic.com/article/how-to-create-board-github-issues/)
+[Brittany Joiner Youtube](https://youtu.be/1q7ZIavgkj4?si=zYoJu2TrDf-h1Qk-)
