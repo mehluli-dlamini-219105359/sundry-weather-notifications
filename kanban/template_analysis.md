@@ -1,16 +1,17 @@
 ## ☀️ Project Template Analysis
 
 
-
-| Roadmap Template         | Feature Release                                            | Iterative Development                  |
-|--------------------------|------------------------------------------------------------|-----------------------------------------|
-| ![Roadmap](https://github.com/user-attachments/assets/d33763bf-243d-45c3-8c0e-daa1efec2590) | ![Feature Release](https://github.com/user-attachments/assets/b2e25af1-3cf2-4a61-b26b-bccf616a547e) | ![Iterative Development](https://github.com/user-attachments/assets/26711852-f2b1-4895-846f-adba1298dce2) |
+| Roadmap Template         | Feature Release                                            | Iterative Development                  | Kanban Board                                     |
+|--------------------------|------------------------------------------------------------|-----------------------------------------|--------------------------------------------------|
+| ![Roadmap](https://github.com/user-attachments/assets/d33763bf-243d-45c3-8c0e-daa1efec2590) | ![Feature Release](https://github.com/user-attachments/assets/b2e25af1-3cf2-4a61-b26b-bccf616a547e) | ![Iterative Development](https://github.com/user-attachments/assets/26711852-f2b1-4895-846f-adba1298dce2) | ![Kanban Board](https://github.com/user-attachments/assets/03a62234-f965-4eab-ba48-f07d7fd9772a) |
 
 
 After exploring the templates , I have decided to select the **Kanban Board** to better align with my project needs.
 As this board will be used in Agile development and for sprint iterations. It will help  me track progress be accountable and prioritize work to be down as the project grows and features increase. 
 
-**Justification** Visualizing Work is one of the main advantages of using the Kanban board. It will enable me to see all tasks in one place, broken down into manageable steps while filtering and customizing the board. The columns on the board are **Sprint Backlog, To Do, In Progress, In Review/Testing, and Done** — whihc create a straightforward flow that tracks where each task is in its lifecycle. This is essential for clarity; As I can immediately identify which tasks are planned for the sprint, what needs to be done, and which tasks are already completed. The visual representation also gives me a snapshot of what’s ahead, which helps me prioritize and focus on completing tasks one at a time given that I am the sole contributor / stakeholder.
+**Justification** Visualizing Work is one of the main advantages of using the Kanban board. It will enable me to see all tasks in one place, broken down into manageable steps while filtering and customizing the board. 
+
+The columns on the board are **Sprint Backlog, To Do, In Progress, In Review/Testing, and Done** — which create a straightforward flow that tracks where each task is in its lifecycle. This is essential for clarity; As I can immediately identify which tasks are planned for the sprint, what needs to be done, and which tasks are already completed. The visual representation also gives me a snapshot of what’s ahead, which helps me prioritize and focus on completing tasks one at a time given that I am the sole contributor / stakeholder.
 
 An important feature of the Kanban board is its ability to limit Work-in-Progress (WIP) - Currently I have maxed it to 3 items. By setting limits on the number of tasks in columns like **In Progress and In Review/Testing**, I ensure that I don’t take on too many tasks at once, which could lead to distractions or unfinished work. Secondly , Limiting WIP helps me maintain focus and complete tasks before moving on to new ones. Which is crucial in maintaining a consistent workflow and preventing bottlenecks. [Github Docx](https://docs.github.com/en/issues/planning-and-tracking-with-projects)
 
