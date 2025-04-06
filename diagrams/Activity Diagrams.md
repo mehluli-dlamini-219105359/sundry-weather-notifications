@@ -1,4 +1,4 @@
-# 🌩️ Sundry Notification App - UML Activity Diagrams
+# UML Activity Diagrams
 
 Below are the selected (8) complex workflows represented as UML Activity Diagrams using Mermaid syntax.
 
