@@ -1,4 +1,4 @@
-# Reflection on UML Diagrams for Sundry Notification App (Task 8)
+# Reflection on UML Diagrams (Task 8)
 
 ### 1. **Choosing Granularity for States/Actions**
 One of the primary challenges was determining the appropriate amount of detail for both states and actions. The balance between **detail and readability** was crucial. Too much detail complicated the diagram, making it harder for anyone besides myself to understand, while too little detail risks leaving out critical steps for them as well. 
@@ -6,7 +6,7 @@ One of the primary challenges was determining the appropriate amount of detail f
 For instance, in the **user authentication state diagram**, could have been broken down to further states such as "Waiting for Input" into multiple sub-states like "Awaiting Username" and "Awaiting Password," when designing it lead to a cluttered diagram. Instead, grouping these into one state helped keep the diagram more concise while accurately reflecting the system behavior. Similarly, actions in activity diagrams, such as "Validate User Preferences," could be subdivided into smaller steps, but doing so would have made the process flow harder to follow. 
 Hence, we made the decision to use broader, high-level actions to maintain clarity.
 
-### 2. **Aligning Diagrams with Agile User Stories**
+### 2. **Aligning Diagrams with Agile User Stories and Use Cases**
 Another challenge arose from aligning **UML diagrams** with the set user stories while also aligning with functional requirements. 
 Agile development is based on incremental and iterative updates, which means that the diagrams can evolve as the project progresses. At first, a **user login** story might only require a simple **activity diagram** showing the login process. However, as new requirements, such as **multi-factor authentication** or **rate-limiting login attempts**, are going to be introduced, the diagrams needed to be updated to reflect these changes.
 
