@@ -1,6 +1,5 @@
 # Reflection on Domain Model and Class Diagram Design
 
-Designing the domain model and class diagram for the Sundry Notification App came with its fair share of challenges, decisions, and “wait, does this even make sense?” moments. I’ll break down how things unfolded and what I learned along the way.
 
 ## 1. Challenges Faced
 
