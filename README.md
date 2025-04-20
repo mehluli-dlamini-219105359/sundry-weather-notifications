@@ -25,6 +25,6 @@ Additional links to other files in the Project :
 
 - (Modularity) Each class is encapsulated in its own file. This avoids bloating a single file with too much functionality, and it makes the codebase easier to navigate.
 
-- (Testing) With separate files, it’s easy to write unit tests for each class or method. You can test classes in isolation, making debugging and validation of individual components easier.
+- [Unit Testing](https://www.testim.io/blog/typescript-unit-testing-101/) With separate files, it’s easy to write unit tests for each class or method. You can test classes in isolation, making debugging and validation of individual components easier.
 
 **Key Design Decisions 🏛️**
