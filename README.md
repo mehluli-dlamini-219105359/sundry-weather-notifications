@@ -21,4 +21,10 @@ Additional links to other files in the Project :
 
 - As the code base grows, TypeScript makes it easier to refactor without breaking functionality. 
 
+- (Seperating Classes) The models/ folder groups all classes and entities related to the app's core logic. Each class has its own file, making it easier to maintain, modify, and expand.
+
+- (Modularity) Each class is encapsulated in its own file. This avoids bloating a single file with too much functionality, and it makes the codebase easier to navigate.
+
+- (Testing) With separate files, it’s easy to write unit tests for each class or method. You can test classes in isolation, making debugging and validation of individual components easier.
+
 **Key Design Decisions 🏛️**
