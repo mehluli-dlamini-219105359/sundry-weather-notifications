@@ -1,5 +1,7 @@
 # Changelog
 
+issue found [Imports BUG](https://github.com/mehluli-dlamini-219105359/sundry-weather-notifications/issues/18)
+
 ## [v1.1.0] - 2025-04-20
 
 ### 🆕 Added
@@ -30,3 +32,4 @@ module.exports = {
     '^.+\\.tsx?$': ['ts-jest', {}],
   },
 };
+
