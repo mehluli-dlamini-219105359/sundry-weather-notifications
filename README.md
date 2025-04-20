@@ -1,4 +1,4 @@
-**Software Engineering Assignement 3** Mehluli Dlamini 219105359 
+## **Software Engineering Assignement 3** Mehluli Dlamini 219105359 
 
 The **Sundry Notification Web App** is a project that will focus on proximity based push notifications for weather events in Cape Town , such as high winds and fires. 
 I undertook or chose this project based on the role that awareness or early warning systems can play to improve alertness towards climate and weather events on the road for commuters. 
@@ -7,13 +7,14 @@ less visibilty for both drivers and padestrians on the very same roads. These we
 The arrive alive campaign in South Africa has helped create public awareness of the dangers of drinking and driving , this awareness project through a simple Notification can possible create more 
 alert drivers and contribute to safer and much intentional driving practices. Small nudges through a cellular device can impossible alter behaviour or attitude as we use these devices daily.
 
-Links to other files in project [SPECIFICATION.md](SPECIFICATION.md)
-& [ARCHITECTURE.md](ARCHITECTURE.md)
+Links to other files in project:
+- [SPECIFICATION.md](SPECIFICATION.md)
+- [ARCHITECTURE.md](ARCHITECTURE.md)
 
 Additional links to other files in the Project :
 [Activity Diagram](https://github.com/mehluli-dlamini-219105359/sundry-weather-notifications/blob/main/diagrams/Activity%20Diagrams.md) & [State Transition Diagram](https://github.com/mehluli-dlamini-219105359/sundry-weather-notifications/blob/main/diagrams/State%20Transition%20Diagrams.md)
 
-**Language Choice : Typescript👨🏽‍💻** 
+## **Language Choice : Typescript👨🏽‍💻** 
 - TypeScript offers strong typing, which helps catch errors early, leading to more robust and reliable code. Typescripts specifies types on class properties and methods (e.g., string, number, Date) ensures that only valid values can be assigned to them.
 [Typescript Docx](https://medium.com/simform-engineering/writing-elegant-typescript-best-practices-for-clean-and-sustainable-code-0b228e44170d)
 
@@ -47,3 +48,23 @@ Methods like updatePreferences() or send() are public and represent actions that
 - Relationships between classes like User owning Notification or WeatherData triggering Notification are kept simple and clear.
 
 - Using TypeScript interfaces for these relationships would further solidify the contract between entities.
+
+## 💡 Creational Patterns — **JUSTIFICATION**
+
+1. Simple Factory
+Used `UserFactory` to centralize creation of Admin, Guest, and Regular users.
+
+2. Factory Method
+Used `NotificationProcessor` with subclass implementations (`Email`, `SMS`) for pluggable notification delivery strategies.
+
+3. Abstract Factory
+Created `AlertFactory` to generate `Notification` + `NotificationPreference` as a related set for Web or Mobile platforms.
+
+4. Builder
+Implemented `WeatherReportBuilder` to construct detailed weather reports with optional fields like humidity and wind.
+
+5. Prototype
+Used `UserPrototypeCache` to clone preconfigured base users like Guest and Admin, avoiding costly init logic.
+
+6. Singleton
+Created `AnalyticsLogger` as a global logger for user event tracking, ensuring consistent logging across services.
