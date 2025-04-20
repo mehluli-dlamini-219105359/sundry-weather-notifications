@@ -28,3 +28,22 @@ Additional links to other files in the Project :
 - [Unit Testing](https://www.testim.io/blog/typescript-unit-testing-101/) With separate files, it’s easy to write unit tests for each class or method. You can test classes in isolation, making debugging and validation of individual components easier.
 
 **Key Design Decisions 🏛️**
+Class-Based Approach:
+
+Classes provide clear encapsulation and allows for easy expansion. i.e.
+
+- [User](https://github.com/mehluli-dlamini-219105359/sundry-weather-notifications/blob/main/src/models/User.ts) has methods like login() and updatePreferences() to represent actions a user can perform.
+
+- [NotificationPreference](https://github.com/mehluli-dlamini-219105359/sundry-weather-notifications/blob/main/src/models/NotificationPreference.ts) is a self-contained class with properties and methods that are logically grouped together (e.g., update() and validateChanges())
+
+- **TypeScript Getters/Setters:**
+
+Private fields (private) are used to encapsulate data and prevent direct manipulation from outside the class.
+
+Methods like updatePreferences() or send() are public and represent actions that can be invoked from outside the class. This ensures that the class's internal logic is kept separate from external components.
+
+**Relationship Mapping:**
+
+- Relationships between classes like User owning Notification or WeatherData triggering Notification are kept simple and clear.
+
+- Using TypeScript interfaces for these relationships would further solidify the contract between entities.
