@@ -72,3 +72,15 @@ Created `AnalyticsLogger` as a global logger for user event tracking, ensuring c
 ## 📁 Repository Interface Design - JUSTIFICATION [Repositories](https://github.com/mehluli-dlamini-219105359/sundry-weather-notifications/tree/main/src/repositories)
 - Using generic interfaces ensures reusability, consistency, and type safety across all entities, avoiding duplication of standard CRUD logic for each repository. It simplifies maintenance because any change to CRUD operations is made once, not dozens of times.
 - A dedicated repository folder keeps all data access logic isolated, making the codebase cleaner, easier to navigate, and aligned with separation of concerns principles. It also improves scalability: as new entities are added, their repositories fit neatly into an organized structure.
+
+## 🔩 Dependency Injection v Factory - JUSTIFICATION [Factory Pattern](https://github.com/mehluli-dlamini-219105359/sundry-weather-notifications/blob/main/src/factories/RepositoryFactory.ts)
+
+I have opted to use Factory Pattern because:
+Factory allows for the manual creation of objects where as Dependency injection automatically handles object creation and wiring (you just declare dependencies).
+
+- No External Dependencies: This project does not use any external libraries (currently) — just TypeScript's built-in functionality.  
+- Flexibility: It's easy to swap out repository implementations (like switching to a database-backed UserRepository) by modifying a few lines in the factory method. i.e. [Factory Improvement](https://github.com/mehluli-dlamini-219105359/sundry-weather-notifications/issues/28)
+- Explicit Object Creation : Easy support for handling environment configurations or adding logic to object creation.
+- Good for Smaller Apps: Since the project is still in its early stages, with only one repository and no complex dependency chains, using the Factory pattern can keep things clear and concise.
+- Reusability:	Can be reused for switching implementation. 
+- Ease of transition: If your app grows in complexity over time, you can easily refactor to DI when necessary [Additional Reading](https://www.tutorialspoint.com/design_pattern/factory_pattern.htm)
