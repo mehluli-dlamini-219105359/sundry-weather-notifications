@@ -5,7 +5,7 @@ import { InMemoryUserRepository } from '../repositories/inmemory/InMemoryUserRep
 import { InMemoryBackupRepository } from '../repositories/inmemory/InMemoryBackUpRepository';
 import { InMemoryNotificationPreferenceRepository } from '../repositories/inmemory/InMemoryNotificationPreferenceRepository';
 import { InMemoryWeatherDataRepository } from '../repositories/inmemory/InMemoryWeatherDataRepository';
-
+import { DatabaseUserRepository } from '../repositories/database/DatabaseUserRepository';
 // Interfaces
 import { UserRepository } from '../repositories/UserRepository';
 import { BackupRepository } from '../repositories/BackupRepository';
@@ -67,4 +67,16 @@ export class RepositoryFactory {
         return this.unsupportedError('WeatherDataRepository');
     }
   }
+  // static userRepository(): UserRepository {
+  //   switch (this.STORAGE_TYPE) {
+  //     case 'MEMORY':
+  //       return new InMemoryUserRepository();
+  //     case 'DATABASE':
+  //       return new DatabaseUserRepository(databaseConnection); // <- You pass the DB connection here!
+  //     case 'FILESYSTEM':
+  //       return new FileSystemUserRepository('./data/users.json');
+  //     default:
+  //       return this.unsupportedError('UserRepository');
+  //   }
+  // }
 }
