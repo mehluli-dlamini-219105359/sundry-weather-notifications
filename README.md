@@ -68,3 +68,7 @@ Used `UserPrototypeCache` to clone preconfigured base users like Guest and Admin
 
 6. Singleton
 Created `AnalyticsLogger` as a global logger for user event tracking, ensuring consistent logging across services.
+
+## 📁 Repository Interface Design - JUSTIFICATION [Repositories](https://github.com/mehluli-dlamini-219105359/sundry-weather-notifications/tree/main/src/repositories)
+- Using generic interfaces ensures reusability, consistency, and type safety across all entities, avoiding duplication of standard CRUD logic for each repository. It simplifies maintenance because any change to CRUD operations is made once, not dozens of times.
+- A dedicated repository folder keeps all data access logic isolated, making the codebase cleaner, easier to navigate, and aligned with separation of concerns principles. It also improves scalability: as new entities are added, their repositories fit neatly into an organized structure.
