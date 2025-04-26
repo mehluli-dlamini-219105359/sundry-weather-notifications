@@ -1,4 +1,13 @@
 export class Backup {
+    id(id: any, entity: Backup) {
+        throw new Error('Method not implemented.');
+    }
+    getCreatedAt(): string | number | Date {
+        throw new Error('Method not implemented.');
+    }
+    userId(userId: string, entity: Backup) {
+        throw new Error('Method not implemented.');
+    }
     private backupId: string;
     private createdAt: Date;
     private status: string;
