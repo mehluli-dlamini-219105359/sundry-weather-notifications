@@ -1,4 +1,4 @@
-import { WeatherReportBuilder } from '../src/creational_patterns/builder/WeatherReportBuilder';
+import { WeatherReportBuilder } from '../creational_patterns/builder/WeatherReportBuilder';
 
 test('creates weather report with temperature and humidity', () => {
   const report = new WeatherReportBuilder()
