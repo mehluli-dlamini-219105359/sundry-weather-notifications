@@ -4,6 +4,7 @@ export class NotificationPreference {
     private frequency: string;
     private channels: string[];
     private lastUpdated: Date;
+  id: string | undefined;
   
     constructor(userId: string) {
       this.userId = userId;
