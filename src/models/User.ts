@@ -1,12 +1,14 @@
 import { NotificationPreference } from './NotificationPreference';
 
 export class User {
+    [x: string]: any;
   private userId: string;
   private email: string;
   private passwordHash: string;
   private role: string;
   private failedLoginAttempts: number;
   private preferences: NotificationPreference;
+    userID: any;
 
   constructor(userId: string, email: string, passwordHash: string, role: string) {
     this.userId = userId;
