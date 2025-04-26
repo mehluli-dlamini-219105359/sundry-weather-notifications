@@ -1,7 +1,8 @@
-##     Sundry Weather Notifications Class Diagram 
+##  🆕 UPDATED Sundry Weather Notifications Class Diagram 
 
 ```mermaid
 classDiagram
+%% === DOMAIN MODELS ===
 class User {
   -userId: String
   -email: String
@@ -81,6 +82,129 @@ class Backup {
   +verifyIntegrity()
 }
 
+%% === REPOSITORY INTERFACES ===
+class Repository~T,ID~ {
+  <<interface>>
+  +findById(id: ID): Promise<T>
+  +findAll(): Promise<T[]>
+  +save(entity: T): Promise<T>
+  +update(entity: T): Promise<T>
+  +delete(id: ID): Promise<void>
+}
+
+class UserRepository {
+  <<interface>>
+  +findByEmail(email: String): Promise<User>
+  +incrementFailedLoginAttempts(userId: String): Promise<void>
+}
+Repository <|-- UserRepository
+
+class WeatherDataRepository {
+  <<interface>>
+  +findRecentByLocation(location: String): Promise<WeatherData[]>
+}
+Repository <|-- WeatherDataRepository
+
+class NotificationRepository {
+  <<interface>>
+  +findByUserId(userId: String): Promise<Notification[]>
+  +markAllAsSent(userId: String): Promise<void>
+}
+Repository <|-- NotificationRepository
+
+class NotificationPreferenceRepository {
+  <<interface>>
+  +findByUserId(userId: String): Promise<NotificationPreference>
+}
+Repository <|-- NotificationPreferenceRepository
+
+class AuthTokenRepository {
+  <<interface>>
+  +findValidTokenForUser(userId: String): Promise<AuthToken>
+  +revokeAllTokensForUser(userId: String): Promise<void>
+}
+Repository <|-- AuthTokenRepository
+
+class AnalyticsEventRepository {
+  <<interface>>
+  +findByUserId(userId: String): Promise<AnalyticsEvent[]>
+  +findByAction(action: String): Promise<AnalyticsEvent[]>
+}
+Repository <|-- AnalyticsEventRepository
+
+class BackupRepository {
+  <<interface>>
+  +findLatestBackup(): Promise<Backup>
+}
+Repository <|-- BackupRepository
+
+%% === REPOSITORY IMPLEMENTATIONS (EXAMPLES) ===
+class InMemoryUserRepository
+UserRepository <|.. InMemoryUserRepository
+
+class InMemoryWeatherDataRepository
+WeatherDataRepository <|.. InMemoryWeatherDataRepository
+
+class InMemoryNotificationPreferenceRepository
+NotificationPreferenceRepository <|.. InMemoryNotificationPreferenceRepository
+
+%% === CREATIONAL PATTERNS (EXAMPLES) ===
+class UserFactory {
+  +createUser(role, userId, email): User
+}
+class AdminUser
+User <|-- AdminUser
+class GuestUser
+User <|-- GuestUser
+class RegularUser
+User <|-- RegularUser
+UserFactory ..> User
+
+class NotificationProcessor {
+  <<interface>>
+  +send(notification: Notification): void
+}
+class EmailNotificationProcessor
+NotificationProcessor <|.. EmailNotificationProcessor
+class SMSNotificationProcessor
+NotificationProcessor <|.. SMSNotificationProcessor
+
+class AlertFactory {
+  <<interface>>
+  +createNotification(userId, message): Notification
+  +createPreference(): NotificationPreference
+}
+class MobileAlertFactory
+AlertFactory <|.. MobileAlertFactory
+class WebAlertFactory
+AlertFactory <|.. WebAlertFactory
+
+class WeatherReportBuilder {
+  +setLocation()
+  +setTemperature()
+  +setCondition()
+  +setHumidity()
+  +setWindSpeed()
+  +build(): WeatherReport
+}
+class WeatherReport
+
+class ClonableUser {
+  +clone(): ClonableUser
+}
+class UserPrototypeCache {
+  +load()
+  +getPrototype(type): ClonableUser
+}
+UserPrototypeCache ..> ClonableUser
+
+class AnalyticsLogger {
+  -instance: AnalyticsLogger
+  +getInstance(): AnalyticsLogger
+  +log(event: AnalyticsEvent): void
+}
+
+%% === RELATIONSHIPS ===
 User "1" -- "1" NotificationPreference : configures
 User "1" -- "0..*" Notification : receives
 User "1" -- "0..*" AnalyticsEvent : generates
