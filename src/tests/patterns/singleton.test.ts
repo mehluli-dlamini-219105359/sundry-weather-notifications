@@ -1,4 +1,4 @@
-import { AnalyticsLogger } from '../src/creational_patterns/singleton/AnalyticsLogger';
+import { AnalyticsLogger } from '../../creational_patterns/singleton/AnalyticsLogger';
 
 test('returns the same instance every time', () => {
   const instance1 = AnalyticsLogger.getInstance();
