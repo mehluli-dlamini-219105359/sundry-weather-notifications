@@ -1,5 +1,5 @@
 export class AuthToken {
-    private token: string;
+    private token: any;
     private userId: string;
     private issuedAt: Date;
     private expiresAt: Date;
