@@ -1,29 +1,37 @@
 // src/factories/RepositoryFactory.ts
 
-import { UserRepository } from '../repositories/UserRepository';
+// In-memory Repositories
 import { InMemoryUserRepository } from '../repositories/inmemory/InMemoryUserRepository';
-// import { MongoUserRepository } from '../repositories/mongo/MongoUserRepository'; // future
-
-import { BackupRepository } from '../repositories/BackupRepository';
 import { InMemoryBackupRepository } from '../repositories/inmemory/InMemoryBackUpRepository';
-
-import { NotificationPreferenceRepository } from '../repositories/NotificationPreferenceRepository';
 import { InMemoryNotificationPreferenceRepository } from '../repositories/inmemory/InMemoryNotificationPreferenceRepository';
-
-import { WeatherDataRepository } from '../repositories/WeatherDataRepository';
 import { InMemoryWeatherDataRepository } from '../repositories/inmemory/InMemoryWeatherDataRepository';
+
+// Interfaces
+import { UserRepository } from '../repositories/UserRepository';
+import { BackupRepository } from '../repositories/BackupRepository';
+import { NotificationPreferenceRepository } from '../repositories/NotificationPreferenceRepository';
+import { WeatherDataRepository } from '../repositories/WeatherDataRepository';
+
+// (Future database repositories)
+// import { DatabaseUserRepository } from '../repositories/database/DatabaseUserRepository';
+// import { DatabaseBackupRepository } from '../repositories/database/DatabaseBackupRepository';
+// etc.
 
 export class RepositoryFactory {
   private static readonly STORAGE_TYPE = process.env.STORAGE_TYPE || 'MEMORY';
+
+  private static unsupportedError(repoName: string): never {
+    throw new Error(`Unsupported STORAGE_TYPE for ${repoName}: ${this.STORAGE_TYPE}`);
+  }
 
   static userRepository(): UserRepository {
     switch (this.STORAGE_TYPE) {
       case 'MEMORY':
         return new InMemoryUserRepository();
       // case 'DATABASE':
-      //   return new MongoUserRepository(); // Uncomment when implemented
+      //   return new DatabaseUserRepository(databaseConnection); // Uncomment when implemented
       default:
-        throw new Error(`Unsupported STORAGE_TYPE for UserRepository: ${this.STORAGE_TYPE}`);
+        return this.unsupportedError('UserRepository');
     }
   }
 
@@ -31,8 +39,10 @@ export class RepositoryFactory {
     switch (this.STORAGE_TYPE) {
       case 'MEMORY':
         return new InMemoryBackupRepository();
+      // case 'DATABASE':
+      //   return new DatabaseBackupRepository(databaseConnection);
       default:
-        throw new Error(`Unsupported STORAGE_TYPE for BackupRepository: ${this.STORAGE_TYPE}`);
+        return this.unsupportedError('BackupRepository');
     }
   }
 
@@ -40,8 +50,10 @@ export class RepositoryFactory {
     switch (this.STORAGE_TYPE) {
       case 'MEMORY':
         return new InMemoryNotificationPreferenceRepository();
+      // case 'DATABASE':
+      //   return new DatabaseNotificationPreferenceRepository(databaseConnection);
       default:
-        throw new Error(`Unsupported STORAGE_TYPE for NotificationPreferenceRepository: ${this.STORAGE_TYPE}`);
+        return this.unsupportedError('NotificationPreferenceRepository');
     }
   }
 
@@ -49,8 +61,10 @@ export class RepositoryFactory {
     switch (this.STORAGE_TYPE) {
       case 'MEMORY':
         return new InMemoryWeatherDataRepository();
+      // case 'DATABASE':
+      //   return new DatabaseWeatherDataRepository(databaseConnection);
       default:
-        throw new Error(`Unsupported STORAGE_TYPE for WeatherDataRepository: ${this.STORAGE_TYPE}`);
+        return this.unsupportedError('WeatherDataRepository');
     }
   }
 }
