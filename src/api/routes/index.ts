@@ -1,53 +1,4 @@
 import express from 'express';
-import { NotificationService } from '../../services/NotificationService';
-import { NotificationPreferenceService } from '../../services/NotificationPreferenceService';
-import { UserService } from '../../services/UserService';
-import { AuthTokenService } from '../../services/AuthTokenService';
-import { AnalyticsEventService } from '../../services/AnalyticsEventService';
-import { WeatherDataService } from '../../services/WeatherDataService';
-import { BackupService } from '../../services/BackupService';
-
-const mockRepo = () => ({
-  findByUserId: async (id: string) => [],
-  findByAction: async (action: string) => [],
-  findByEmail: async (email: string) => null,
-  incrementFailedLoginAttempts: async (id: string) => {},
-  findValidTokenForUser: async (id: string) => null,
-  revokeAllTokensForUser: async (id: string) => {},
-  findRecentByLocation: async (location: string) => [],
-  findLatestBackup: async () => null,
-  markAllAsSent: async (id: string) => {},
-  save: async (entity: any) => entity,
-  findById: async (id: string) => null,
-  findAll: async () => [],
-  update: async (entity: any) => entity,
-  delete: async (id: string) => {},
-});
-
-const notificationService = new NotificationService(mockRepo(), mockRepo());
-const notificationPrefService = new NotificationPreferenceService(mockRepo());
-const userService = new UserService(mockRepo());
-const authTokenService = new AuthTokenService(mockRepo());
-const analyticsService = new AnalyticsEventService(mockRepo());
-const weatherService = new WeatherDataService(mockRepo());
-const backupService = new BackupService(mockRepo());
-
-const router = express.Router();
-
-// Middleware to inject services into req for controllers
-router.use((req, res, next) => {
-  req.services = {
-    notificationService,
-    notificationPrefService,
-    userService,
-    authTokenService,
-    analyticsService,
-    weatherService,
-    backupService,
-  };
-  next();
-});
-
 import { NotificationController } from '../controllers/NotificationController';
 import { NotificationPreferenceController } from '../controllers/NotificationPreferenceController';
 import { UserController } from '../controllers/UserController';
@@ -56,28 +7,72 @@ import { AnalyticsEventController } from '../controllers/AnalyticsEventControlle
 import { WeatherDataController } from '../controllers/WeatherDataController';
 import { BackupController } from '../controllers/BackupController';
 
-router.post('/notifications', NotificationController.sendNotification);
+const router = express.Router();
 
-router.get('/notifications/:userId', NotificationController.getUserNotifications);
+// Mocked repo factory for testing purposes
+const mockRepo = () => ({
+  findByUserId: async () => [],
+  findByAction: async () => [],
+  findByEmail: async () => null,
+  incrementFailedLoginAttempts: async () => {},
+  findValidTokenForUser: async () => null,
+  revokeAllTokensForUser: async () => {},
+  findRecentByLocation: async () => [],
+  findLatestBackup: async () => null,
+  markAllAsSent: async () => {},
+  save: async (entity: any) => entity,
+  findById: async () => null,
+  findAll: async () => [],
+  update: async (entity: any) => entity,
+  delete: async () => {},
+});
 
-router.post('/notifications/:userId/mark-sent', NotificationController.markAllNotificationsAsSent);
+// Services
+import { NotificationService } from '../../services/NotificationService';
+import { NotificationPreferenceService } from '../../services/NotificationPreferenceService';
+import { UserService } from '../../services/UserService';
+import { AuthTokenService } from '../../services/AuthTokenService';
+import { AnalyticsEventService } from '../../services/AnalyticsEventService';
+import { WeatherDataService } from '../../services/WeatherDataService';
+import { BackupService } from '../../services/BackupService';
 
-router.get('/preferences/:userId', NotificationPreferenceController.getPreference);
+const services = {
+  notificationService: new NotificationService(mockRepo(), mockRepo()),
+  notificationPrefService: new NotificationPreferenceService(mockRepo()),
+  userService: new UserService(mockRepo()),
+  authTokenService: new AuthTokenService(mockRepo()),
+  analyticsService: new AnalyticsEventService(mockRepo()),
+  weatherService: new WeatherDataService(mockRepo()),
+  backupService: new BackupService(mockRepo()),
+};
 
-router.get('/users/email/:email', UserController.findUserByEmail);
+// Inject services into request
+router.use((req, res, next) => {
+  req.services = services;
+  next();
+});
 
-router.post('/users/:userId/increment-failed-login', UserController.incrementFailedLogins);
+// -------------------- Notification --------------------
+router.post('/api/notifications', NotificationController.sendNotification);
+router.get('/api/notifications/:userId', NotificationController.getUserNotifications);
+router.post('/api/notifications/:userId/mark-sent', NotificationController.markAllNotificationsAsSent);
 
-router.get('/tokens/:userId', AuthTokenController.getValidToken);
+// -------------------- Notification Preferences --------------------
+router.get('/api/preferences/:userId', NotificationPreferenceController.getPreference);
 
-router.post('/tokens/:userId/revoke', AuthTokenController.revokeUserTokens);
+// -------------------- User --------------------
+router.post('/api/users/:userId/increment-failed-login', UserController.incrementFailedLogins);
 
-router.get('/analytics/user/:userId', AnalyticsEventController.getEventsByUser);
+// -------------------- Analytics --------------------
+router.get('/api/analytics/user/:userId', AnalyticsEventController.getEventsByUser);
+router.get('/api/analytics/action/:action', AnalyticsEventController.getEventsByAction);
 
-router.get('/analytics/action/:action', AnalyticsEventController.getEventsByAction);
+// -------------------- Weather --------------------
+router.get('/api/weather/:location', WeatherDataController.getRecentWeather);
 
-router.get('/weather/:location', WeatherDataController.getRecentWeather);
-
-router.get('/backups/latest', BackupController.getLatestBackup);
+// -------------------- Backup --------------------
+//router.get('/api/backups/latest', BackupController.getLatestBackup);
+//router.get('/api/backups/:location', BackupController.getBackupsByLocation);
+//router.get('/api/backups/:location/:date', BackupController.getBackupByLocationAndDate);
 
 export default router;
