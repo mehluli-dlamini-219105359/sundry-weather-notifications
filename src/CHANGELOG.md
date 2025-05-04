@@ -20,19 +20,6 @@ issue found [Imports BUG](https://github.com/mehluli-dlamini-219105359/sundry-we
 - Edge case handling (e.g., missing builder inputs, singleton uniqueness)
 
 ### 🛠️ Changed 
-- **`User.ts`** class was moved out of `UserFactory.ts` to resolve circular import issues and eliminate `"Cannot find module './User'"` error.
-- Updated `jest.config.js` to correct multiple export conflict and apply `ts-jest` transform for `.ts`/`.tsx` files:
-```js
-/** @type {import('ts-jest').JestConfigWithTsJest} */
-module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'node',
-  roots: ['<rootDir>/tests'],
-  transform: {
-    '^.+\\.tsx?$': ['ts-jest', {}],
-  },
-};'''
-
 ### ✅ REST API Features Implemented
 
 Organized and routed controller-based features under the `/api` folder:
@@ -73,3 +60,16 @@ Organized and routed controller-based features under the `/api` folder:
 - Descriptions, parameters, request/response schemas, and common error codes were defined for every endpoint.
 - The spec is ready for integration with Swagger UI, Postman, or ReDoc.
 
+
+- **`User.ts`** class was moved out of `UserFactory.ts` to resolve circular import issues and eliminate `"Cannot find module './User'"` error.
+- Updated `jest.config.js` to correct multiple export conflict and apply `ts-jest` transform for `.ts`/`.tsx` files:
+```js
+/** @type {import('ts-jest').JestConfigWithTsJest} */
+module.exports = {
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  roots: ['<rootDir>/tests'],
+  transform: {
+    '^.+\\.tsx?$': ['ts-jest', {}],
+  },
+};
