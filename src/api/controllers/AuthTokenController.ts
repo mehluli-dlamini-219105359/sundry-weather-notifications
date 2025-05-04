@@ -2,9 +2,9 @@ import { Request, Response } from 'express';
 
 export class AuthTokenController {
   static async getValidToken(req: Request, res: Response) {
-    const { authTokenService } = req.services;
-    const token = await authTokenService.findValidTokenForUser(req.params.userId);
-    if (token) return res.json(token);
+    //const { authTokenService } = req.services;
+    //const token = await authTokenService.findValidTokenForUser(req.params.userId);
+    //if (token) return res.json(token);
     res.sendStatus(404);
   }
 
