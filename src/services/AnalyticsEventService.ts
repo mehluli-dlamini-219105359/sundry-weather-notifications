@@ -3,6 +3,9 @@ import { AnalyticsEventRepository } from '../repositories/AnalyticsEventReposito
 import { AnalyticsEvent } from '../models/AnalyticsEvent';
 
 export class AnalyticsEventService {
+  getEventsByUser(userId: string) {
+      throw new Error('Method not implemented.');
+  }
   constructor(private analyticsEventRepository: AnalyticsEventRepository) {}
 
   async logEvent(event: AnalyticsEvent): Promise<AnalyticsEvent> {
