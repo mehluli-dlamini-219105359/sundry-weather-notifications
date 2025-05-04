@@ -1,26 +1,11 @@
 # Changelog
 
-issue found [Imports BUG](https://github.com/mehluli-dlamini-219105359/sundry-weather-notifications/issues/18)
-
-## [v1.1.0] - 2025-04-20
-
-### 🆕 Added
-- Introduced unit tests for all creational design patterns:
-  - `SimpleFactory`
-  - `FactoryMethod`
-  - `AbstractFactory`
-  - `Builder`
-  - `Prototype`
-  - `Singleton`
-- Created `/tests` directory with the following structure:
+Issues Closed [Lsit](https://github.com/mehluli-dlamini-219105359/sundry-weather-notifications/issues?q=is%3Aissue%20state%3Aclosed%20assignee%3Amehluli-dlamini-219105359)
+## [v1.1.0] - 2025-05-04
 
 
-- Example test cases added for:
-- Object creation and attribute validation
-- Edge case handling (e.g., missing builder inputs, singleton uniqueness)
-
-### 🛠️ Changed 
-### ✅ REST API Features Implemented
+### 🛠️ Additions 
+### ✅ REST API Features Implemented [API Folder](https://github.com/mehluli-dlamini-219105359/sundry-weather-notifications/tree/main/src/api)
 
 Organized and routed controller-based features under the `/api` folder:
 
@@ -44,7 +29,7 @@ Organized and routed controller-based features under the `/api` folder:
 
 ---
 
-## Tests
+## Tests [Tests](https://github.com/mehluli-dlamini-219105359/sundry-weather-notifications/tree/main/src/tests)
 
 - Test files were written in a dedicated `tests/` folder using **Supertest** with **Jest**.
 - All endpoint routes were covered with integration tests.
@@ -54,12 +39,27 @@ Organized and routed controller-based features under the `/api` folder:
 
 ---
 
-##  OpenAPI Documentation
+##  OpenAPI Documentation [APIs](https://github.com/mehluli-dlamini-219105359/sundry-weather-notifications/blob/main/docs/openapi.yaml)
 
 - A full OpenAPI 3.0.3 spec was created in `openapi.yaml`.
 - Descriptions, parameters, request/response schemas, and common error codes were defined for every endpoint.
 - The spec is ready for integration with Swagger UI, Postman, or ReDoc.
 
+### [2025-04-20]Previous VERSION 
+### 🆕 Added
+- Introduced unit tests for all creational design patterns:
+  - `SimpleFactory`
+  - `FactoryMethod`
+  - `AbstractFactory`
+  - `Builder`
+  - `Prototype`
+  - `Singleton`
+- Created `/tests` directory with the following structure:
+
+
+- Example test cases added for:
+- Object creation and attribute validation
+- Edge case handling (e.g., missing builder inputs, singleton uniqueness)
 
 - **`User.ts`** class was moved out of `UserFactory.ts` to resolve circular import issues and eliminate `"Cannot find module './User'"` error.
 - Updated `jest.config.js` to correct multiple export conflict and apply `ts-jest` transform for `.ts`/`.tsx` files:
