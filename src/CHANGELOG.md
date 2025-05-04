@@ -31,7 +31,7 @@ module.exports = {
   transform: {
     '^.+\\.tsx?$': ['ts-jest', {}],
   },
-};```
+};'''
 
 ### ✅ REST API Features Implemented
 
