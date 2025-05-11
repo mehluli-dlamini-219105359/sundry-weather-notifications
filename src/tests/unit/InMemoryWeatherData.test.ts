@@ -1,5 +1,5 @@
-import { InMemoryWeatherDataRepository } from '../../../src/repositories/inmemory/InMemoryWeatherDataRepository';
-import { WeatherData } from '../../../src/models/WeatherData';
+import { InMemoryWeatherDataRepository } from '../../repositories/inmemory/InMemoryWeatherDataRepository';
+import { WeatherData } from '../../models/WeatherData';
 //working repo
 describe('InMemoryWeatherDataRepository', () => {
   let repository: InMemoryWeatherDataRepository;
