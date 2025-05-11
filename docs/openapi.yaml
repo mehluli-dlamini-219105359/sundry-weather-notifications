@@ -1,0 +1,128 @@
+openapi: 3.0.3
+info:
+  title: Sundry Notifications API
+  version: 1.0.0
+  description: API documentation for the Sundry Notifications service.
+
+paths:
+  /api/notifications:
+    post:
+      summary: Send a notification to a user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [userId, message]
+              properties:
+                userId:
+                  type: string
+                message:
+                  type: string
+      responses:
+        '200':
+          description: Notification sent successfully
+        '400':
+          description: Invalid request data
+
+  /api/notifications/{userId}:
+    get:
+      summary: Get notifications for a specific user
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of user notifications
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '404':
+          description: User not found
+
+  /api/notifications/{userId}/mark-sent:
+    post:
+      summary: Mark all notifications as sent for a user
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Notifications marked as sent
+
+  /api/preferences/{userId}:
+    get:
+      summary: Get notification preferences for a user
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: User preferences
+        '404':
+          description: Preferences not found
+
+  /api/users/{userId}/increment-failed-login:
+    post:
+      summary: Increment failed login attempts for a user
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Failed login attempt recorded
+
+  /api/analytics/user/{userId}:
+    get:
+      summary: Get analytics events for a user
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Analytics events for user
+
+  /api/analytics/action/{action}:
+    get:
+      summary: Get analytics events by action
+      parameters:
+        - name: action
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Analytics events for the specified action
+
+  /api/weather/{location}:
+    get:
+      summary: Get recent weather data for a location
+      parameters:
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Recent weather data for the location
