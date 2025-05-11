@@ -1,5 +1,5 @@
-import { InMemoryUserRepository } from '../../../src/repositories/inmemory/InMemoryAnalyticsEventsRepository';;
-import { User } from '../../../src/models/User';
+import { InMemoryUserRepository } from '../../repositories/inmemory/InMemoryAnalyticsEventsRepository';;
+import { User } from '../../models/User';
 //Unit Tests for working in memory repo
 describe('InMemoryUserRepository', () => {
   let repository: InMemoryUserRepository;
