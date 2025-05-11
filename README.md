@@ -84,3 +84,16 @@ Factory allows for the manual creation of objects where as Dependency injection 
 - Good for Smaller Apps: Since the project is still in its early stages, with only one repository and no complex dependency chains, using the Factory pattern can keep things clear and concise.
 - Reusability:	Can be reused for switching implementation. 
 - Ease of transition: If your app grows in complexity over time, you can easily refactor to DI when necessary [Additional Reading](https://www.tutorialspoint.com/design_pattern/factory_pattern.htm)
+
+## Github Workflow CI/CD
+
+## Running Tests Locally
+
+Run unit tests locally using `npm run test:unit`. Make sure you’ve installed dependencies with `npm ci`. The tests are focused on the `tests/unit` folder and are meant to catch problems early, but locally they won’t block you — useful for when you’re iterating fast or isolating a bug.
+
+## CI/CD Pipeline
+
+The pipeline runs automatically on every push and on pull requests to `main`. It installs dependencies, runs unit tests, and logs failures without stopping the rest of the workflow. When changes are merged into `main`, the app is rebuilt, and the output from `dist/` is uploaded as an artifact. If the build succeeds, Vercel handles deployment using the project and org IDs from secrets. Even if tests fail, artifacts are still captured for visibility.
+
+## Artefact Generation 
+Issue with creating an artefact as previous bugs not caught / handled correctly prevented it from being build. Experiencing issue from not running unit tests on classes. 
