@@ -19,5 +19,5 @@
       "@/*": ["*"] // Maps '@' to the 'src' directory
     }
   },
-  "include": ["src"]
+  "include": ["src", "tests", "__tests__"]
 }
