@@ -28,6 +28,13 @@ jobs:
       - name: Run unit tests
         run: npm run test:unit
 
+      - name: Upload test results (even if tests fail)
+        if: always()  # Ensure this step runs even if tests fail
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: test-results/
+
   release:
     name: Build & Release (main only)
     if: github.ref == 'refs/heads/main'
@@ -49,12 +56,14 @@ jobs:
         run: npm run build
 
       - name: Upload build artifact
+        if: always()  # Ensure the artifact is uploaded even if tests fail
         uses: actions/upload-artifact@v4
         with:
           name: web-release
           path: dist/
 
       - name: Deploy to GitHub Pages
+        if: success()  # Only deploy if the build is successful
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
