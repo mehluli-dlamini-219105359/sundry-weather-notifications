@@ -1,4 +1,49 @@
-## **Software Engineering Assignement 3** Mehluli Dlamini 219105359 
+## Mehluli Dlamini 219105359 
+
+## Updated README - Features for Contribution
+
+| Feature                          | Description                                                                 |
+|----------------------------------|-----------------------------------------------------------------------------|
+| Role-Based Access Control (RBAC) | Restrict access to features based on user roles like Admin, Guest, etc.    |
+| Two-Factor Authentication (2FA)  | Add a second layer of user authentication to improve login security        |
+| Proximity Notification Engine    | Triggers alerts based on geolocation and real-time weather data            |
+| Notification Delivery Mechanism | Pluggable system (Email, SMS, Push) for sending alerts                     |
+| Alert Preferences UI            | Interface for users to set and update weather alert preferences            |
+| Weather Report Generator        | Generates detailed reports with temperature, humidity, wind, etc.         |
+| Analytics Logger                | Tracks user interactions and alert delivery success/failure (bug under review) |
+| Repository Interface Layer      | Centralized data access logic using generic TypeScript interfaces          |
+
+## [17-05-25] Getting Started
+
+To run the Sundry Notification Web App locally:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/mehluli-dlamini-219105359/sundry-weather-notifications.git
+   cd sundry-weather-notifications
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm ci
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Run unit tests:**
+   ```bash
+   npm run test:unit
+   ```
+
+For contribution guidelines and setting up the architecture, refer to:
+- [SPECIFICATION.md](SPECIFICATION.md)
+- [ARCHITECTURE.md](ARCHITECTURE.md)
+- [Activity Diagram](https://github.com/mehluli-dlamini-219105359/sundry-weather-notifications/blob/main/diagrams/Activity%20Diagrams.md)
+- [State Transition Diagram](https://github.com/mehluli-dlamini-219105359/sundry-weather-notifications/blob/main/diagrams/State%20Transition%20Diagrams.md)
+
 
 The **Sundry Notification Web App** is a project that will focus on proximity based push notifications for weather events in Cape Town , such as high winds and fires. 
 I undertook or chose this project based on the role that awareness or early warning systems can play to improve alertness towards climate and weather events on the road for commuters. 
