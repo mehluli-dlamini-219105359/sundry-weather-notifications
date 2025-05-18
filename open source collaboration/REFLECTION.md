@@ -20,3 +20,5 @@ Open source is more than simply sharing code; it involves creating an environmen
 
 I will also learn how to embracing feedback, articulating design decisions, and recognizing all contributions foster a positive community culture. The responsibility to share and also interact with other students github repo's also forstered a community of engagement and contribution to other projects that I found interesting.
 The process will not only improve the codebase but also enhanced my ability to create inclusive and productive collaborative spaces. I am sincerely grateful for this growth.
+
+Mehluli Dlamini 219105359
